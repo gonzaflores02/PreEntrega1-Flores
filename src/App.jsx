@@ -5,7 +5,7 @@ function App() {
   return (
     <>
       <Navbar />
-      <ItemListContainer greeting="Este es mi E-Commerce de perifericos!" />
+      <ItemListContainer greeting="Este es mi E-Commerce de perifericos!!" />
     </>
   );
 }
