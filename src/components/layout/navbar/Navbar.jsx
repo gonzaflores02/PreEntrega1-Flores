@@ -1,33 +1,38 @@
 import { CartWidget } from "../../common/CartWidget/CartWidget";
 import "./navbar.css";
+import { Link } from "react-router-dom";
 
 export const Navbar = () => {
   return (
     <header>
-      <img
-        src="https://res.cloudinary.com/dgjy86aon/image/upload/v1728572831/logo_xdetwb.svg"
-        alt="Logo de G-Tech"
-        className="logo"
-      />
+      <Link to="/">
+        <img
+          src="https://res.cloudinary.com/dgjy86aon/image/upload/v1728572831/logo_xdetwb.svg"
+          alt="Logo de G-Tech"
+          className="logo"
+        />
+      </Link>
 
       <nav>
         <ul className="nav-links">
           <li>
-            <a href="">Inicio</a>
+            <Link to="/">Inicio</Link>
           </li>
           <li>
-            <a href="">Teclados</a>
+            <Link to="/categoria/teclados">Teclados</Link>
           </li>
           <li>
-            <a href="">Mouses Gamer</a>
+            <Link to="/categoria/mouses">Mouses Gamer</Link>
           </li>
           <li>
-            <a href="">Auriculares Gamer</a>
+            <Link to="/categoria/headsets">Auriculares Gamer</Link>
           </li>
         </ul>
       </nav>
 
-      <CartWidget />
+      <Link to="/cart">
+        <CartWidget />
+      </Link>
     </header>
   );
 };
